@@ -1,0 +1,37 @@
+Input:
+    account number as an integer
+    mortgage amount in dollars
+    mortgage term in years
+    interest rate as a decimal
+
+Ouput:
+    monthly payable interest rounded off to the nearest dollars
+
+Top: 
+    Calculates monthly payable interest accrued on a bank customer's mortgage
+
+First refinement:
+    INITIALIZE variables
+    CALCULATE the payable interest
+    DISPLAY the payable interest
+
+Second refinement:
+        SET unsigned integer account_number to 0
+        SET unsigned float mortgage_amount to 0
+        SET unsigned integer mortgage_term to 0
+        SET unsigned float interest_rate to 0
+        SET unsigned float total_payable_amount to 0
+        SET unsigned float payable_interest to 0
+
+        WHILE account_number is not -1
+            OBTAIN account_number
+            IF account_number is -1
+                BREAK loop
+            ENDIF
+            CALCULATE total_payable_amount by multiplying mortgage_amount,
+            interest_rate and mortgage_term
+            CALCULATE payable_interest by dividing the total_payable_amount to
+            the number of months in the mortgage term
+        ENDWHILE
+
+        DISPLAY the value of payable_interest 
