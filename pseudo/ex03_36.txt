@@ -1,0 +1,19 @@
+Top: Projects the estimated world population after 1, 2, 3, 4, and 5 years
+
+First refinement:
+    INITIALIZE variables
+    CALCULATE estimated world population
+    DISPLAY projections
+
+Second refinement:
+    SET unsigned integer pop_total to 7,890,826,950
+    SET float growth_rate to 0.0103 
+    SET unsigned integer pop_increase to 0
+    SET unsigned integer year to 1
+    
+    WHILE year less than or equal to 5
+        CALCULATE pop_increase by multiplying pop_total and growth_rate
+        SET pop_total by adding pop_total and pop_increase
+        DISPLAY value of pop_total
+        INCREMENT year
+    ENDWHILE

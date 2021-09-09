@@ -8,12 +8,8 @@ int main(void)
     float county_rate = 0.05;
     float state_rate = 0.04;
 
-    float total_collection = 0;
+    float total_collection, county_tax, state_tax, total_tax, sales;
     char month[30];
-    float county_tax = 0;
-    float state_tax = 0;
-    float total_tax = 0;
-    float sales = 0;
 
     // Begin obtaining values and calculating results
     while (total_collection != -1) {
@@ -21,7 +17,7 @@ int main(void)
         printf("%s", "Enter total amount collected (-1 to quit): "); 
         scanf("%f", &total_collection);
 
-        // Terminate program if input is -1
+        // Terminate program immediately if input is -1
         if (total_collection == -1) {
             break;
         }

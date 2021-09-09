@@ -1,0 +1,38 @@
+Input:
+    Sales for a week
+
+Output:
+    Salary
+
+Constants:
+    Salespeople receive $200 per week
+    plus 9% of their gross sales for that week
+
+Top:    
+    Calculates the salary of a salesperson for a week
+
+First refinement:
+    INITIALIZE variables
+    CALCULATE salary
+    DISPLAY salary
+
+Second refinement:
+    Set float sales to 0
+    Set unsigned integer fixed_salary to 200
+    Set float commission_rate to 0.09
+    Set float total_commission to 0
+    Set float total_salary to 0
+
+    WHILE sales is not -1
+        PROMPT user to input sales
+        OBTAIN value of sales
+        IF sales is -1
+            RETURN 1
+        ENDIF
+
+        CALCULATE total_commission by multiplying sales and commission_rate
+        CALCULATE total_salary by adding fixed_salary and total_commission
+    ENDWHILE
+
+    DISPLAY value of total_salary
+    RETURN 0

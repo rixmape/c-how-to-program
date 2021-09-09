@@ -20,7 +20,7 @@ int main(void)
 
         // Terminate program if account_number is -1
         if (account_number == -1) {
-            return 1;
+            break;
         }
 
         // Obtain other information

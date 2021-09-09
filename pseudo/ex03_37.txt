@@ -1,0 +1,27 @@
+Top: Calculates person's age, maximum heart rate and target-heart-rate range
+
+First refinement:
+    DECLARE variables
+    OBTAIN present date and person's birthdate
+    CALCULATE person's age
+    CALCULATE person's maximum heart rate
+    CALCULATE person's target-heart-rate range
+    DISPLAY results
+
+Second refinement:
+    DECLARE integer currrent_month, currrent_day and currrent_year
+    DECLARE integer bdate_month, bdate_day and bdate_year
+    DECLARE integer age, max_hrate, min_target_hrate, max_target_hrate
+
+    OBTAIN currrent_month, currrent_day and currrent_year
+    OBTAIN bdate_month, bdate_day and bdate_year
+
+    CALCULATE age by subtracting bdate_year from currrent_year
+    CALCULATE max_hrate by subtracting age from 220
+    CALCULATE min_target_hrate by multiplying max_hrate to 0.5
+    CALCULATE max_target_hrate by multiplying max_hrate to 0.85
+
+    DISPLAY age
+    DISPLAY max_hrate
+    DISPLAY max_target_hrate
+

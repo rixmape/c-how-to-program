@@ -1,18 +1,3 @@
-Input:
-    total collections
-    name of month
-
-Output:
-    total collections
-    sales
-    county sales tax
-    state sales tax
-    total sales tax collected
-
-Constants:
-    4% state sales tax
-    5% county sales tax
-
 Top:
     Calculates the sales tax on the total collections for a month
 
@@ -22,30 +7,27 @@ First refinement:
     DISPLAY results
 
 Second refinement:
-    SET float total_collection to 0
-    DECLARE character array month with 50 character-limit
     SET float county_rate to 0.05
     SET float state_rate to 0.04
-    SET float county_tax to 0
-    SET float state_tax to 0
-    SET float total_tax to 0
-    SET float sales to 0 
 
-    WHILE total_collection is not equal to -1
+    DEFINE float total_collection, county_tax, state_tax, total_tax, and sales
+    DEFINE character array month with 50 character-limit
+
+    WHILE total_collection is not equal to -1 DO
         GET total_collection
-        IF total_collection is equal to -1
-            THEN exit loop
+        IF total_collection is equal to -1 THEN
+            BREAK loop
         ENDIF
         GET month
-        SET county_tax to the product of total_collection and county_rate
-        SET state_tax to the product of total_collection and state_rate
-        SET total_tax to the sum of county_tax and state_tax
-        SET sales to the difference of total_collection and total_tax
+        SET county_tax to total_collection * county_rate
+        SET state_tax to total_collection * state_rate
+        SET total_tax to county_tax + state_tax
+        SET sales to total_collection - total_tax
     ENDWHILE
 
-    PRINT the value of total_collection
-    PRINT the value of sales
-    PRINT the value of county_tax
-    PRINT the value of state_tax
-    PRINT the value of total_tax
+    PRINT total_collection
+    PRINT sales
+    PRINT county_tax
+    PRINT state_tax
+    PRINT total_tax
         

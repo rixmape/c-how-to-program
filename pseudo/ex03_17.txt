@@ -16,22 +16,22 @@ First refinement:
     DISPLAY the payable interest
 
 Second refinement:
-        SET unsigned integer account_number to 0
-        SET unsigned float mortgage_amount to 0
-        SET unsigned integer mortgage_term to 0
-        SET unsigned float interest_rate to 0
-        SET unsigned float total_payable_amount to 0
-        SET unsigned float payable_interest to 0
+    SET integer account_number to 0
+    SET float mortgage_amount to 0
+    SET integer mortgage_term to 0
+    SET float interest_rate to 0
+    SET float total_payable_amount to 0
+    SET float payable_interest to 0
 
-        WHILE account_number is not -1
-            OBTAIN account_number
-            IF account_number is -1
-                BREAK loop
-            ENDIF
-            CALCULATE total_payable_amount by multiplying mortgage_amount,
-            interest_rate and mortgage_term
-            CALCULATE payable_interest by dividing the total_payable_amount to
-            the number of months in the mortgage term
-        ENDWHILE
+    WHILE account_number is not -1
+        OBTAIN account_number
+        IF account_number is -1
+            BREAK loop
+        ENDIF
+        CALCULATE total_payable_amount by multiplying mortgage_amount,
+        interest_rate and mortgage_term
+        CALCULATE payable_interest by dividing the total_payable_amount to
+        the number of months in the mortgage term
+    ENDWHILE
 
-        DISPLAY the value of payable_interest 
+    DISPLAY the value of payable_interest 
